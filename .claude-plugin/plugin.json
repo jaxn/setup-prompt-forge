@@ -1,0 +1,12 @@
+{
+  "name": "setup-prompt-forge",
+  "version": "0.1.0",
+  "description": "Generate runnable, stateful workspace setup prompts that drive themselves to a desired end state — with subagent parallelism and resume-on-interrupt",
+  "author": {
+    "name": "Jackson Miller",
+    "email": "jackson@resaleai.com"
+  },
+  "repository": "https://github.com/jaxn/setup-prompt-forge",
+  "license": "UNLICENSED",
+  "keywords": ["setup", "onboarding", "automation", "subagents", "workspace"]
+}
