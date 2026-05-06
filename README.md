@@ -227,7 +227,11 @@ Subagent availability depends on the target environment. Claude Code supports th
 
 ## Running a Generated Prompt
 
-**Claude Code**: Paste the entire prompt into a new conversation. Claude will start executing immediately. You’ll see the TodoList populate at the start and tick off as phases complete.
+**Claude Code**: Run the generated prompt using `claude code` (the autonomous REPL mode). Paste the entire prompt in and Claude will start executing immediately. You’ll see the TodoList populate at the start and tick off as phases complete.
+
+Don’t use `claude chat` or `claude cowork` for this. `claude code` has full tool access and runs autonomously, which is what the generated prompt expects. `claude chat` is conversational and won’t self-drive through the phases. `claude cowork` is designed for IDE integration and skill management, not for running long setup sequences.
+
+If your goal is to install a skill (rather than run a setup prompt), use `claude cowork` instead.
 
 **Claude Desktop**: Paste the prompt into a new conversation. Claude will guide you through the phases conversationally. If you have a filesystem MCP configured, it will manage the state file automatically. If not, Claude will track progress in the conversation and note where you’d need to take manual steps.
 
