@@ -31,10 +31,12 @@ Before writing anything, interview the user. Ask the following (can be a single 
 
 2. **Target environment** — Where will the generated prompt be run?
    - `claude-desktop` — Claude Desktop with MCP tool access
-   - `claude-code` — Claude Code (has bash, filesystem, subagents, TodoList)
+   - `claude-code` — Claude Code (has bash, filesystem, subagents, TodoList). The generated prompt is designed for `claude code` (the autonomous REPL mode), not `claude chat` or `claude cowork`.
    - `codex` — OpenAI Codex CLI
    - `generic` — Paste-anywhere (no special tool assumptions)
    - Multiple / unknown → generate for `claude-code` with notes for others
+
+   > **Note**: If the user mentions wanting to install this skill itself or set up cowork plugins, guide them to use `claude cowork` directly rather than generating a setup prompt. Cowork handles skill installation natively; a setup prompt is the wrong tool for that job.
 
 3. **Prerequisite knowledge** — What should the runner already have?
    - e.g., API keys in environment, a GitHub account, Docker running, Node.js installed

@@ -13,6 +13,8 @@ Per-environment notes on tool availability, subagent syntax, and conventions.
 **Parallel execution**: Full subagent support; agents run in parallel when spawned together  
 **Resume**: Works well — re-run the same prompt, state file is read on startup  
 
+**CLI mode**: Generated prompts target `claude code` (the autonomous REPL mode). Do not run generated prompts in `claude chat` (lacks autonomous execution) or `claude cowork` (designed for skill management, not setup execution). The prompt expects to self-drive through phases without user interaction, which only `claude code` supports.
+
 **Notes**:
 - Bash tool gives full shell access; can run arbitrary commands
 - Subagents have their own context — pass all needed info in the Task prompt
